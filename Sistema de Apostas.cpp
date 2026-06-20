@@ -7,7 +7,7 @@
 #include <time.h>
 
 
-//Definição de constantes
+//DefiniÃ§Ã£o de constantes
 #define TFNA 10
 #define TFNS 5
 #define TFNM 50
@@ -286,7 +286,6 @@ char Menu_principal()
 	gotoxy(x + 2, y + 3); textcolor(WHITE); printf("Trabalho Criado Por:");
 	gotoxy(x + 2, y + 4); printf(" - Arthur Orosco");
 	gotoxy(x + 2, y + 5); printf(" - Mateus Maciel");
-	gotoxy(x + 2, y + 6); printf(" - Gabriel Pereira");
 
 	gotoxy(x + 2, y + 8);  printf("[A] Cadastros");
 	gotoxy(x + 2, y + 9);  printf("[B] Buscas");
@@ -472,7 +471,7 @@ void CadAposta()
 				printf("\nDigite o %do numero apostado: ",i+1);
 				scanf("%d",&aux_max_ap);
 				
-				// Verifica se o número já foi gerado antes
+				// Verifica se o nÃºmero jÃ¡ foi gerado antes
 	            for (j = 0; j < i; j++) {
 	                if (AP.NumApost[j] == aux_max_ap) {
 	                    repetido = 1;
@@ -486,7 +485,7 @@ void CadAposta()
 					printf("\nDigite o %do numero apostado: ",i+1);
 					scanf("%d",&aux_max_ap);
 					
-					// Verifica se o número já foi gerado antes
+					// Verifica se o nÃºmero jÃ¡ foi gerado antes
 		            for (j = 0; j < i; j++) {
 		                if (AP.NumApost[j] == aux_max_ap) {
 		                    repetido = 1;
@@ -693,7 +692,7 @@ void AltAposta()
 									printf("\nDigite o %do numero apostado: ",i+1);
 									scanf("%d",&aux_max_ap);
 									
-									// Verifica se o número já foi gerado antes
+									// Verifica se o nÃºmero jÃ¡ foi gerado antes
 						            for (j = 0; j < i; j++) {
 						                if (AP.NumApost[j] == aux_max_ap) {
 						                    repetido = 1;
@@ -707,7 +706,7 @@ void AltAposta()
 										printf("\nDigite o %do numero apostado: ",i+1);
 										scanf("%d",&aux_max_ap);
 										
-										// Verifica se o número já foi gerado antes
+										// Verifica se o nÃºmero jÃ¡ foi gerado antes
 							            for (j = 0; j < i; j++) {
 							                if (AP.NumApost[j] == aux_max_ap) {
 							                    repetido = 1;
@@ -727,7 +726,7 @@ void AltAposta()
 									printf("\nDigite o %do numero apostado: ",i+1);
 									scanf("%d",&aux_max_ap);
 									
-									// Verifica se o número já foi gerado antes
+									// Verifica se o nÃºmero jÃ¡ foi gerado antes
 						            for (j = 0; j < i; j++) {
 						                if (AP.NumApost[j] == aux_max_ap) {
 						                    repetido = 1;
@@ -741,7 +740,7 @@ void AltAposta()
 										printf("\nDigite o %do numero apostado: ",i+1);
 										scanf("%d",&aux_max_ap);
 										
-										// Verifica se o número já foi gerado antes
+										// Verifica se o nÃºmero jÃ¡ foi gerado antes
 							            for (j = 0; j < i; j++) {
 							                if (AP.NumApost[j] == aux_max_ap) {
 							                    repetido = 1;
@@ -1339,7 +1338,7 @@ void CadApostador(){
 }
 
 
-// Função para verificar se o CPF já existe
+// FunÃ§Ã£o para verificar se o CPF jÃ¡ existe
 int BuscarCPF(FILE *PtrApostador, char auxCPF[10]){
 	TpApostadores Apostador;
 	fseek(PtrApostador,0,SEEK_SET);
@@ -1487,7 +1486,7 @@ void AlterarDadosApostador(){
 							//-----------------------------------------------------
 							
 							gotoxy(x + 17, y + 1);
-							printf("*** Alteração de Nome ***");
+							printf("*** AlteraÃ§Ã£o de Nome ***");
 							gotoxy(x + 2, y + 3);
 							printf("Novo Nome: ");fflush(stdin);
 							gets(Apostador.Nome);
@@ -1500,7 +1499,7 @@ void AlterarDadosApostador(){
 							//-----------------------------------------------------
 							
 							gotoxy(x + 17, y + 1);
-							printf("*** Alteração de Telefone ***\n");
+							printf("*** AlteraÃ§Ã£o de Telefone ***\n");
 							gotoxy(x + 2, y + 3);
 							printf("Novo DDD: ");
 							scanf("%d", &Apostador.DDD);
@@ -1576,7 +1575,7 @@ void ExclusaoLogica_Apostador(){
 				printf("\nCPF: %s\n", Apostador.CPF);
 				printf("\nNome: %s\n",Apostador.Nome);
 				printf("\nTelefone: (%d)%d", Apostador.DDD, Apostador.NumTel);
-				printf("\nDeseja realizar a Exclusão(S/N)? ");
+				printf("\nDeseja realizar a ExclusÃ£o(S/N)? ");
 				if(toupper(getche())=='S'){
 					
 					permite_exc = -1;
@@ -1724,12 +1723,12 @@ void ExibeApostadores() {
 		getch();
     }
 
-    linha++; // Espaço após o título
+    linha++; // EspaÃ§o apÃ³s o tÃ­tulo
 
     while (fread(&Apostador, sizeof(TpApostadores), 1, PtrApostador) == 1) {
         if (Apostador.status == 'A') {
 
-            // Verifica se a próxima exibição ultrapassará o limite da moldura
+            // Verifica se a prÃ³xima exibiÃ§Ã£o ultrapassarÃ¡ o limite da moldura
             if (linha + 5 >= y + altura - 1) {
                 
                 getch();
@@ -1740,7 +1739,7 @@ void ExibeApostadores() {
 
                 gotoxy(x + 10, linha++);
                 printf("*** Relatorio de Apostadores ***");
-                linha++; // Espaço após o título
+                linha++; // EspaÃ§o apÃ³s o tÃ­tulo
             }
 
             gotoxy(x + 2, linha++);
@@ -1957,10 +1956,10 @@ void Sotnum(int Num[5]) {
     
     for (i = 0; i < 5; i++) {
         do {
-            Nuns = (rand() % 60)+1; // Gera um número aleatório entre 0 e 60
+            Nuns = (rand() % 60)+1; // Gera um nÃºmero aleatÃ³rio entre 0 e 60
             int repetido = 0;
 
-            // Verifica se o número já foi gerado antes
+            // Verifica se o nÃºmero jÃ¡ foi gerado antes
             for (j = 0; j < i; j++) {
                 if (Num[j] == Nuns) {
                     repetido = 1;
@@ -1968,7 +1967,7 @@ void Sotnum(int Num[5]) {
                 }
             }
 
-            // Se for repetido, gera outro número
+            // Se for repetido, gera outro nÃºmero
             if (!repetido) {
                 Num[i] = Nuns;
                 break;
@@ -2071,7 +2070,7 @@ void ExConc(TpConcurso Concurso[TFB], int &TLC, TpAposta C[TFB*TFB], int TLAP)
 		do
 		{
 				printf("\n### Exclusao de Concurso ###");
-				printf("\nNumero do Concurso Para Exclusão: ");
+				printf("\nNumero do Concurso Para ExclusÃ£o: ");
 				scanf("%d", &AuxBus);
 				
 				verifica = VeriNum(Concurso, TLC, AuxBus);
