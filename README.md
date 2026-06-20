@@ -83,9 +83,9 @@ Dica de Interface: Utilize as letras indicadas nos colchetes ([A], [B], etc.) pa
 
 ⚠️ Este é um projeto estritamente didático e de nível acadêmico de segundo semestre. Possui limitações estruturais intrínsecas:
 
-`*`Gravação sequencial direta em arquivos em formato binário bruto.
+* **Gravação sequencial direta em arquivos em formato binário bruto.
 
-`*`Interface gráfica limitada ao buffer padrão do Prompt de Comando do Windows (cmd.exe).
+* **Interface gráfica limitada ao buffer padrão do Prompt de Comando do Windows (cmd.exe).
 
 📄 Licença
 
