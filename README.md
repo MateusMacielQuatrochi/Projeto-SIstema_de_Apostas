@@ -9,7 +9,6 @@ O sistema controla três frentes principais por meio de arquivos binários: os *
 ## 👥 Desenvolvedores
 * **Arthur Orosco**
 * **Mateus Maciel**
-* **Gabriel Pereira**
 
 ---
 
@@ -76,11 +75,14 @@ Caso prefira compilar direto pelo terminal do Windows:
 ```bash
 g++ main.cpp -o SistemaApostas -lconio
 ```
+---
 
 Dica de Interface: Utilize as letras indicadas nos colchetes ([A], [B], etc.) para se locomover pelos menus e pressione a tecla ESC para sair ou retornar à tela anterior.
 
-📋 Observações Importantes (Aviso Acadêmico)
+---
 
+📋 Observações Importantes (Aviso Acadêmico)
+---
 ⚠️ Este é um projeto estritamente didático e de nível acadêmico de segundo semestre. Possui limitações estruturais intrínsecas:
 
 * Gravação sequencial direta em arquivos em formato binário bruto.
@@ -88,5 +90,5 @@ Dica de Interface: Utilize as letras indicadas nos colchetes ([A], [B], etc.) pa
 * Interface gráfica limitada ao buffer padrão do Prompt de Comando do Windows (cmd.exe).
 
 📄 Licença
-
+---
 Este projeto é distribuído sob a licença MIT.
